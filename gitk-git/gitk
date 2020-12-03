@@ -6592,8 +6592,8 @@ proc drawtags {id x xt y1} {
     if {[info exists idtags($id)]} {
         set marks $idtags($id)
         set ntags [llength $marks]
-        if {$ntags > $maxtags ||
-            [totalwidth $marks mainfont $extra] > $maxwidth} {
+        if {0 && {$ntags > $maxtags ||
+            [totalwidth $marks mainfont $extra] > $maxwidth}} {
             # show just a single "n tags..." tag
             set singletag 1
             if {$ntags == 1} {
